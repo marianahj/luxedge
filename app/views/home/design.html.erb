@@ -1,0 +1,84 @@
+<%= render 'layouts/header' %>
+<div class="design-container">
+
+  <div class="blueprints">
+    <div class="table-blueprint">
+      <div class="wood">
+        <span>wood</span>
+      </div>
+      <div class="epoxy">
+        <span>epoxy</span>
+      </div>
+      <div class="wood">
+        <span>wood</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="controllers">
+    <div class="wood-controller">
+      <select name="wood" id="wood">
+        <option value="0">Choose a wood</option>
+        <option value="wood1">Wood 1</option>
+        <option value="wood2">Wood 2</option>
+        <option value="wood3">Wood 3</option>
+        <option value="wood4">Wood 4</option>
+      </select>
+    </div>
+
+    <div class="epoxy-controller">
+      <select name="epoxy" id="epoxy">
+        <option value="0">Choose an epoxy</option>
+        <option value="epoxy1">Epoxy 1</option>
+        <option value="epoxy2">Epoxy 2</option>
+        <option value="epoxy3">Epoxy 3</option>
+        <option value="epoxy4">Epoxy 4</option>
+      </select>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+    $('#wood').change(function(){
+      var option = this.value;
+      var color;
+      switch(option){
+        case 'wood1':
+          color = 'red';
+          break;
+        case 'wood2':
+          color = 'orange';
+          break;
+        case 'wood3':
+          color = 'green';
+          break;
+        case 'wood4':
+          color = 'blue';
+          break;
+       }
+       $('.table-blueprint .wood').css('background-color', color);
+    });
+
+    $('#epoxy').change(function(){
+      var option = this.value;
+      var color;
+      switch(option){
+        case 'epoxy1':
+          color = 'cyan';
+          break;
+        case 'epoxy2':
+          color = 'paleturquoise';
+          break;
+        case 'epoxy3':
+          color = 'darkcyan';
+          break;
+        case 'epoxy4':
+          color = 'aquamarine';
+          break;
+      }
+      $('.table-blueprint .epoxy').css('background-color', color);
+    })
+  });
+</script>

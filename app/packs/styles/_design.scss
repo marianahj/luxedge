@@ -1,0 +1,87 @@
+.design-container {
+  display: flex;
+
+  .blueprints {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+
+    .table-blueprint {
+      margin: 0 auto;
+      width: 310px;
+      height: 600px;
+      border: 1px solid black;
+
+      .wood {
+        float: left;
+        width: 100px;
+        height: 600px;
+        border: 1px solid black;
+        position: relative;
+
+        span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform-origin: 0 0;
+          transform: rotate(270deg);
+        }
+      }
+
+      .epoxy {
+        float: left;
+        width: 100px;
+        height: 600px;
+        border: 1px solid black;
+        position: relative;
+
+        span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform-origin: 0 0;
+          transform: rotate(270deg);
+        }
+      }
+
+    }
+  }
+
+  .controllers {
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    background-color: #999999;
+
+    .wood-controller {
+      width: 40%;
+      height: 20%;
+      background-color: lightgray;
+      display: block;
+      margin: 30px auto;
+
+      select {
+        display: block;
+        width: 90%;
+        height: 40px;
+        margin:20px auto;
+      }
+    }
+
+    .epoxy-controller {
+      width: 40%;
+      height: 20%;
+      background-color: lightblue;
+      display: block;
+      margin: 30px auto;
+
+      select {
+        display: block;
+        width: 90%;
+        height: 40px;
+        margin:20px auto;
+      }
+    }
+  }
+
+}
